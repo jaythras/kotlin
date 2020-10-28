@@ -1,179 +1,165 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Final Project</title>
-    <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Bootstrap CSS CDN -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-      crossorigin="anonymous"
-    />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="index.css" />
-    <!-- Scrollbar Custom CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
-    />
+  <title>Final Project</title>
+  <link rel="shortcut icon" type="image/png" href="favicon.ico" />
 
-    <!-- Font Awesome JS -->
-    <script
-      src="https://kit.fontawesome.com/5b4ae90d71.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css" />
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" />
 
-  <body>
-    <div class="wrapper">
-      <!-- Sidebar  -->
-      <nav id="sidebar">
-        <div class="sidebar-header">
-          <h3>Kotlin</h3>
-        </div>
+  <!-- Font Awesome JS -->
+  <script src="https://kit.fontawesome.com/5b4ae90d71.js" crossorigin="anonymous"></script>
+</head>
 
-        <ul class="list-unstyled components">
-          <li><p>CSCI 35500</p></li>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="proposal.html">Project Proposal</a>
-          </li>
-          <li>
-            <a href="">Mobile</a>
-          </li>
-          <li>
-            <a href="">Server Side</a>
-          </li>
-          <li>
-            <a href="">Data Science</a>
-          </li>
-
-          <li>
-            <a
-              href="#webDevelopmentSubmenu"
-              data-toggle="collapse"
-              aria-expanded="false"
-              class="dropdown-toggle"
-              >Web Development</a
-            >
-            <ul class="collapse list-unstyled" id="webDevelopmentSubmenu">
-              <li>
-                <a href="">Kotlin/JS</a>
-              </li>
-              <li>
-                <a href="">Kotlin/JS for React</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <ul class="list-unstyled CTAs">
-          <li>
-            <a href="https://github.com/jaythras/kotlin" class="download">
-              View on Github
-              <span style="font-size: 1.3em; padding-left: 0.2em">
-                <i class="fab fa-github-alt"></i>
-              </span>
-            </a>
-          </li>
-        </ul>
-        <ul class="list-unstyled signiture">
-          <li>
-            <p>
-              Made with
-              <br />
-              <i class="far fa-heart"></i>
-              <br />
-              by
-              <br />
-              Jayden Thrasher
-            </p>
-          </li>
-        </ul>
-      </nav>
-
-      <!-- Page Content  -->
-      <div id="content">
-        <div class="container-fluid">
-          <button type="button" id="sidebarCollapse" class="navbar-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-        <div class="card m-3 p-5">
-          <h1>Project Proposal</h1>
-        </div>
-        <div class="line"></div>
-        <class class="card m-3 p-5">
-          <h3>Project Description</h3>
-          <p>
-            For my final project, I would like to do an in-depth exploration of
-            the Kotlin programming language. Kotlin is a statically typed,
-            general-purpose programming language initially designed to run on
-            the JVM. Today, Kotlin is quickly becoming a reliable alternative
-            for Java codebases and has a wide range of solutions for mobile
-            development, server-side programming, data science, and even web
-            development. For this project, I will be working alone. I plan to
-            explore what solutions Kotlin offers in each of the domains listed
-            above, namely, mobile development, server-side programming, data
-            science, and web development. In each of these domains, I plan to
-            build a small sample application and write about my findings.
-            Creating a small sample application in each space will allow me to
-            better understand how using Kotlin compares to using some of the
-            alternatives in each field.
-          </p>
-          <h3>Anticipated Challenges</h3>
-          <p>
-            Kotlin is a programming language that I have been interested in for
-            a while, but I haven’t had a great opportunity to dive in. As with
-            any language, I expect that there will be a bit of a learning curve.
-            More so than the syntax itself, I think that there will be a fair
-            amount of tooling to learn before I will be able to make much
-            progress with my implementations. For example, I will need to learn
-            more about build tools like Maven or Gradle to properly build my
-            sample projects. To show that my projects are correct, I will
-            demonstrate some functionality in each of the domains listed above.
-            Additionally, in my write-up, I will link to proper documentation
-            where appropriate.
-          </p>
-
-          <p>
-            Download the original pdf
-            <a href="static/FinalProjectProposal.pdf" download><u>here</u></a
-            >.
-          </p>
-        </class>
+<body>
+  <div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h3>Kotlin</h3>
       </div>
-    </div>
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Popper.JS -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
-      integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Bootstrap JS -->
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
-      integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-      crossorigin="anonymous"
-    ></script>
-    <!-- jQuery Custom Scroller CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
-    <script src="index.js"></script>
-  </body>
+      <ul class="list-unstyled components">
+        <li>
+          <p>CSCI 35500</p>
+        </li>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="proposal.html">Project Proposal</a>
+        </li>
+        <li>
+          <a href="#checkpointSubmenu" data-toggle="collapse" aria-expanded="false"
+            class="dropdown-toggle">Checkpoints</a>
+          <ul class="collapse list-unstyled" id="checkpointSubmenu">
+            <li>
+              <a href="checkpointOne.html">Checkpoint One</a>
+            </li>
+            <li>
+              <a href="checkpointTwo.html">Checkpoint Two</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="">Web Development</a>
+        </li>
+        <li>
+          <a href="">Server Side</a>
+        </li>
+        <li>
+          <a href="">Mobile</a>
+        </li>
+        <li>
+          <a href="">Data Science</a>
+        </li>
+      </ul>
+      <ul class="list-unstyled CTAs">
+        <li>
+          <a href="https://github.com/jaythras/kotlin" class="download">
+            View on Github
+            <span style="font-size: 1.3em; padding-left: 0.2em">
+              <i class="fab fa-github-alt"></i>
+            </span>
+          </a>
+        </li>
+      </ul>
+      <ul class="list-unstyled signiture">
+        <li>
+          <p>
+            Made with
+            <br />
+            <i class="far fa-heart"></i>
+            <br />
+            by
+            <br />
+            Jayden Thrasher
+          </p>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+      <div class="container-fluid">
+        <button type="button" id="sidebarCollapse" class="navbar-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="card m-3 p-5">
+        <h1>Project Proposal</h1>
+      </div>
+      <div class="line"></div>
+      <class class="card m-3 p-5">
+        <h3>Project Description</h3>
+        <p>
+          For my final project, I would like to do an in-depth exploration of
+          the Kotlin programming language. Kotlin is a statically typed,
+          general-purpose programming language initially designed to run on
+          the JVM. Today, Kotlin is quickly becoming a reliable alternative
+          for Java codebases and has a wide range of solutions for mobile
+          development, server-side programming, data science, and even web
+          development. For this project, I will be working alone. I plan to
+          explore what solutions Kotlin offers in each of the domains listed
+          above, namely, mobile development, server-side programming, data
+          science, and web development. In each of these domains, I plan to
+          build a small sample application and write about my findings.
+          Creating a small sample application in each space will allow me to
+          better understand how using Kotlin compares to using some of the
+          alternatives in each field.
+        </p>
+        <h3>Anticipated Challenges</h3>
+        <p>
+          Kotlin is a programming language that I have been interested in for
+          a while, but I haven’t had a great opportunity to dive in. As with
+          any language, I expect that there will be a bit of a learning curve.
+          More so than the syntax itself, I think that there will be a fair
+          amount of tooling to learn before I will be able to make much
+          progress with my implementations. For example, I will need to learn
+          more about build tools like Maven or Gradle to properly build my
+          sample projects. To show that my projects are correct, I will
+          demonstrate some functionality in each of the domains listed above.
+          Additionally, in my write-up, I will link to proper documentation
+          where appropriate.
+        </p>
+
+        <p>
+          Download the original pdf
+          <a href="static/FinalProjectProposal.pdf" download><u>here</u></a>.
+        </p>
+      </class>
+    </div>
+  </div>
+  <!-- jQuery CDN - Slim version (=without AJAX) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+    integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
+  <!-- jQuery Custom Scroller CDN -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  <script src="index.js"></script>
+</body>
+
 </html>
