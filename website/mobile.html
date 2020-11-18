@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Final Project</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" />
+
+    <!-- Font Awesome JS -->
+    <script src="https://kit.fontawesome.com/5b4ae90d71.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Kotlin</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <p>CSCI 35500</p>
+                </li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="proposal.html">Project Proposal</a>
+                </li>
+                <li>
+                    <a href="#checkpointSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Checkpoints</a>
+                    <ul class="collapse list-unstyled" id="checkpointSubmenu">
+                        <li>
+                            <a href="checkpointOne.html">Checkpoint One</a>
+                        </li>
+                        <li>
+                            <a href="checkpointTwo.html">Checkpoint Two</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="webDevelopement.html">Web Development</a>
+                </li>
+                <li>
+                    <a href="serverSide.html">Server Side</a>
+                </li>
+                <li>
+                    <a href="mobile.html">Mobile</a>
+                </li>
+                <li>
+                    <a href="dataScience.html">Data Science</a>
+                </li>
+            </ul>
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://github.com/jaythras/kotlin" class="download">
+                        View on Github
+                        <span style="font-size: 1.3em; padding-left: 0.2em">
+                            <i class="fab fa-github-alt"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="list-unstyled signiture">
+                <li>
+                    <p>
+                        Made with
+                        <br />
+                        <i class="far fa-heart"></i>
+                        <br />
+                        by
+                        <br />
+                        Jayden Thrasher
+                    </p>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="navbar-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="card m-3 p-5">
+                <h1>Mobile</h1>
+            </div>
+            <div class="line"></div>
+            <class class="card m-3 p-5">
+                <h3>Implementation</h3>
+                <p>
+                    When I began exploring Kotlin for mobile development, two clear paths stood out to me. This first
+                    was one that I had already touched when building my full stack server. That is by using Kotlin
+                    Multiplatform. Here, you can write one repository of source code that is compiled down to both the
+                    Android and iOS platforms. The other way to get started using Kotlin for mobile is by writing an
+                    Android app directly. Since this was something that I hadn't explored before, I decided to dive in!
+                </p>
+                <p>
+                    Since Google I/O 2019, Google has been Kotlin first with regards to Android development. To
+                    familiarize myself with this use case, I followed a tutorial available on the android website for
+                    developers to create an interactive dice rolling app. To begin, I downloaded and installed Google's
+                    Android Studio. This is the best way to create apps that will run on the Android platform. It
+                    includes many of the tools that come with the JetBrains editors, and also includes some tools
+                    specific to Android development like a visual layout editor and an Android emulator. Later, I will
+                    demonstrate my finished app on an emulated Google Pixel 3 XL.
+                </p>
+
+                <img src="static/emulator.png" alt="An Android emulator." class="longImage">
+
+                <p>
+                    Next, I started a new project by using the Android Studio Project Wizard. After configuring a new
+                    emulator instance, I was able to start the application and was greeted by a "Hello, World" android
+                    application.
+                </p>
+                <img src="static/helloAndroid.png" alt="A Hello World Android
+                app." class="longImage">
+                <p>Then, I used Android Studio to edit the activity_main.xml file. In Android, each app has a main
+                    activity. In my app, this main activity involved rolling a die and reporting the result to the user.
+                    To add a button to the main screen, I used the Layout Editor to add a button component to the
+                    component tree. Then, I anchored this button to the bottom of the "Hello, World" message. This keeps
+                    the bottom from floating freely around the screen. Next, I added some functionality to the bottom.
+                    Initially, I did this by adding a Toast to the screen when the user clicked the button. A Toast is a
+                    short message that is displayed to the user. This functionality is defined in the MainActivity.kt
+                    file when the main activity is created. After seeing this work, I started to implement the dice
+                    logic.</p>
+
+                <p>
+                    Then, I used Android Studio to edit the activity_main.xml file. In Android, each app has a main
+                    activity. In my app, this main activity involved rolling a die and reporting the result to the user.
+                    To add a button to the main screen, I used the Layout Editor to add a button component to the
+                    component tree. Then, I anchored this button to the bottom of the "Hello, World" message. This keeps
+                    the bottom from floating freely around the screen. Next, I added some functionality to the bottom.
+                    Initially, I did this by adding a Toast to the screen when the user clicked the button. A Toast is a
+                    short message that is displayed to the user. This functionality is defined in the MainActivity.kt
+                    file when the main activity is created. After seeing this work, I started to implement the dice
+                    logic.
+                </p>
+
+                <p>
+                    When referring to uploaded images in Kotlin, you must use their resource IDs. This looks like
+                    "R.drawable.dice_1", "R.drawable.dice_1", etc. Finally, I used a Kotlin 'when' statement to
+                    determine which image to load based on which integer was reported from the Roll class. As a
+                    finishing touch, I updated the logic to roll the dice when the app is first loaded. Before, the
+                    screen was blank until the button was pushed the first time. Additionally, I used the Constraint
+                    Widget from within the Layout Editor to add a small margin between the top of the button and the
+                    bottom of the die image. A video demo of the complete app can be seen below.
+                </p>
+
+                <video controls src="static/dice.mov" class="longImage"></video>
+                <h3>Analysis</h3>
+                <p>Kotlin for Android was an incredibly refreshing experience! Kotlin is the go to language for Android
+                    development, and now I understand why. The object-oriented capabilities of Kotlin tied with all of
+                    its awesome collections methods makes it ideal for developing large data intensive applications. Due
+                    to Google's Kotlin-first approach to Android development, there is a ton of support for Kotlin on
+                    mobile. Before Kotlin, most Android apps were written in Java. However, writing apps in Java
+                    required much more boilerplate code. According to Google, 67% of professional developers who use
+                    Kotlin say that Kotlin has increased their productivity. Additionally, Kotlin provides many language
+                    features to automatically avoid null pointer exceptions. Finally, Kotlin coroutines make working
+                    with asynchronous code as easy as possible. In my opinion, Kotlin scores highly in readability,
+                    writability, and guidance when used for Android development.</p>
+            </class>
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

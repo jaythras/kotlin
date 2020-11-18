@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Final Project</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" />
+
+    <!-- Font Awesome JS -->
+    <script src="https://kit.fontawesome.com/5b4ae90d71.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Kotlin</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <p>CSCI 35500</p>
+                </li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="proposal.html">Project Proposal</a>
+                </li>
+                <li>
+                    <a href="#checkpointSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Checkpoints</a>
+                    <ul class="collapse list-unstyled" id="checkpointSubmenu">
+                        <li>
+                            <a href="checkpointOne.html">Checkpoint One</a>
+                        </li>
+                        <li>
+                            <a href="checkpointTwo.html">Checkpoint Two</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="webDevelopement.html">Web Development</a>
+                </li>
+                <li>
+                    <a href="serverSide.html">Server Side</a>
+                </li>
+                <li>
+                    <a href="mobile.html">Mobile</a>
+                </li>
+                <li>
+                    <a href="dataScience.html">Data Science</a>
+                </li>
+            </ul>
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://github.com/jaythras/kotlin" class="download">
+                        View on Github
+                        <span style="font-size: 1.3em; padding-left: 0.2em">
+                            <i class="fab fa-github-alt"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="list-unstyled signiture">
+                <li>
+                    <p>
+                        Made with
+                        <br />
+                        <i class="far fa-heart"></i>
+                        <br />
+                        by
+                        <br />
+                        Jayden Thrasher
+                    </p>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="navbar-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="card m-3 p-5">
+                <h1>Server Side</h1>
+            </div>
+            <div class="line"></div>
+            <class class="card m-3 p-5">
+                <h3>Implementation</h3>
+                <p>
+                    To explore Kotlin for server side applications, I build a
+                    really awesome Kotlin multiplatform project. This project
+                    was
+                    inspired by a hands on lab that can be found on the Kotlin website. Although this was my
+                    inspiration, my application extends the material that was covered in the lab and adds entirely new
+                    functionality.
+                </p>
+                <p>
+                    Support for multiplatform programming is a huge benefit of Kotlin. When you use Kotlin's
+                    multiplatform
+                    libraries, you can write and reuse common code structures between different platforms.
+                    To understand this better, I decided to build a full-stack Todo List application, that used Kotlin
+                    for both the client and the server. On the frontend, I used Kotlin/JS with React. To build my
+                    backend, I used Kotlin/JVM to build a server. On this server, I used the Ktor framework to build an
+                    asynchronous REST API. Finally, I used several of Kotlin's multiplatform libraries including
+                    kotlinx.serialization and kotlinx.coroutines. This enabled me to write type-safe code, even when
+                    communicating over a network. Additionally, this lets me reuse constructs that were shared between
+                    the client and the server. In my application, I used this functionality to create a type-safe
+                    definition of the todo list item. After building a functioning application, I used the KMongo
+                    framework to map my serialized todo items into a local MongoDB database. This way, my data persists
+                    even after I terminate the server.
+                </p>
+                <p>
+                    To begin, I created a basic Ktor API. This API uses the Netty development engine, and serves locally
+                    on port 8080. When I accessed the path "/hello", I was greeted by a "Hello world" message. Although
+                    this may seem similar to my initial checkpoint, this message is being propagated from the backend,
+                    whereas my initial exploration was entirely in Kotlin/JS.
+                </p>
+                <img src="static/basicAPI.png" alt='A basic Ktor API.' />
+                <br>
+                <img src="static/helloServer.png" alt='A hello world server message.' />
+
+                <p>After getting this working, I created a Serializable data class to represent each todo item. Since
+                    this construct belongs to the commonMain directory, both the client and the server can use this
+                    definition. From here, the kotlinx.serialization package will serialize and deserialize this class
+                    for us without us ever having to think about it. This is super powerful!</p>
+
+                <img src="static/todoItem.png" alt='Todo Item.' />
+
+                <p>Next, I created a mutableList to act as my temporary data store, as well as some basic routes for my
+                    API.</p>
+
+                <img src="static/api.png" alt='API' />
+
+
+                <p>To test the GET method, I simply accessed the link from my browser. This returned my temporary list
+                    of todo items.</p>
+
+                <p>To test the POST, PUT, and DELETE methods, I used a tool called postman. Below you can see a sample
+                    POST request, as well as the appropriate response from the server. Here, I am making a POST request
+                    to add a new item. similarly, I make a PUT request to update the status of an item. Finally, I make
+                    a DELETE request to remove an item completely.</p>
+
+                <img src="static/post.png" alt='A POST request.' />
+
+                <p>After my backend was fully functional, I used my experience from checkpoint one to create a front-end
+                    application using Kotlin/JS. Here, I built an API client to interface with the ktor-clients library.
+                    This allowed me to connect my frontend to my backend in a really clean way. After building an input
+                    component, and connecting my frontend to the proper API calls, I had a functional todo list
+                    application.</p>
+
+                <p>After that, I dug into the KMongo framework. This is a great community-driven Kotlin framework and it
+                    makes it a breeze to integrate a MongoDB database into your Kotlin/JVM application.</p>
+
+                <p>After removing the mutable list, and replacing this logic with the appropriate calls to KMongo, I now
+                    have a permanent data store. Here is a snippet that shows what the data actually looks like within
+                    MongoDB.</p>
+
+                <img src="static/database.png" alt='Data in the database.' />
+
+                <p>Below is a video demonstration of the complete application!</p>
+
+                <video controls src="static/todo.mov"></video>
+                <h3>Analysis</h3>
+                <p>As of today, I cannot see myself using this on a real project unless I could gain a lot of value from
+                    Kotlin's multiplatform capabilities. This is a feature that I talk about more in the server side
+                    section of this website! Unfortunatly when it came to web development, there was very little
+                    guidance. Additionally, writing React with Kotlin/JS just didn't flow the same way that I had come
+                    to expect from writing React with JavaScript. In my opinion, Kotlin is less writable than JavaScript
+                    due to a higher bar of entry, but it is more readable due to strict typing and null safety. If I
+                    were looking for a type safe version of React, I would probably explore TypeScript, a superset of
+                    JavaScript. Then, I would still be able to benefit from the huge number of existing JavaScript
+                    resources.</p>
+            </class>
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
